@@ -8,7 +8,7 @@ on:
     tags:
       - v*
     branches:
-      - *
+      - ci
 jobs:
 
   build:
