@@ -24,10 +24,10 @@ jobs:
       - name: Build
         run: |
           mkdir target
-          GOOS=linux GOARCH=amd64 go build -o target/zaes-linux -v ./...
-          GOOS=windows GOARCH=amd64 go build -o target/zaes-windows -v ./...
-          GOOS=darwin GOARCH=amd64 go build -o zaes-darwin-amd64 -v ./...
-          GOOS=darwin GOARCH=arm go build -o zaes-darwin-arm -v ./...
+          GOOS=linux GOARCH=amd64 go build -o target/zaes-linux -v .
+          GOOS=windows GOARCH=amd64 go build -o target/zaes-windows.exe -v .
+          GOOS=darwin GOARCH=amd64 go build -o target/zaes-darwin-amd64 -v .
+          GOOS=darwin GOARCH=arm go build -o target/zaes-darwin-arm -v .
 
       - name: GitHub Releases
         uses: fnkr/github-action-ghr@v1.3
